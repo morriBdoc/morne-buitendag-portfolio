@@ -4,20 +4,29 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=menu"
+    />
   </head>
   <body>
     <header>
-      <img
-        src="./images/profile-picture.jpg"
-        alt="Profile Picture"
-        width="50px"
-      />
-      <h1>Morne Buitendag</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="projects.html">Projects</a>
-        <a href="articles.html">Articles</a>
-        <a href="contact.html">Contact</a>
+      <div id="my-name">
+        <img
+          src="./images/profile-picture.jpg"
+          alt="Profile Picture"
+          class="profile-photo"
+          width="50px"
+          height="50px"
+        />
+        <h1>Morne Buitendag</h1>
+      </div>
+      <nav id="navigation">
+        <a href="index.html" class="nav-link">Home</a>
+        <a href="projects.html" class="nav-link">Projects</a>
+        <a href="articles.html" class="nav-link">Articles</a>
+        <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </header>
     <main>
@@ -29,28 +38,32 @@
         </p>
       </section>
       <section id="projects">
-        <h2>Projects</h2>
-        <h3>HTML Only Portfolio</h3>
-        <h3>Calculator</h3>
-        <h3>Quiz App</h3>
-        <h3>Countdown Timer</h3>
-        <h3>Product Upcoming Page</h3>
+        <h2>Top Projects</h2>
+        <div id="top-projects">
+          <a href="">
+            <h3>HTML Only Portfolio</h3>
+          </a>
+        </div>
+        <div id="upcoming-projects">
+          <h3>Project Upcoming Page</h3>
+          <a href="">
+            <h4>HTML Only Portfolio</h4>
+          </a>
+        </div>
       </section>
       <section id="work-experience">
         <h2>Work Experience</h2>
         <div>
-          <h3>roadmap.sh</h3>
-          <p>Solved all the frontend projects</p>
-          <a href="">Visit my profile</a>
+          <p>
+            No professional experience yet, but seeking opportunities to apply
+            skills in a real-world environment.
+          </p>
         </div>
       </section>
       <section id="opensource-work">
         <h2>OpenSource Work</h2>
         <div>
-          <p>
-            Contributed to 50 opensource projects. Made my own projects with 200
-            GitHub Stars.
-          </p>
+          <p>No opensource work yet.</p>
           <a href="">Visit my GitHub Profile</a>
         </div>
       </section>
@@ -71,10 +84,18 @@
       </section>
       <section id="certifications">
         <h2>Certifications</h2>
+        <div>
+          <h3>
+            <a
+              href="https://www.freecodecamp.org/certification/morri_bdoc/responsive-web-design-v9"
+              target="_blank"
+              >Responsive Web Design</a
+            >
+          </h3>
+          <p>freeCodeCamp | Feb 2026</p>
+        </div>
       </section>
     </main>
-    <footer>
-      <p>&copy; all rights reserved 2026</p>
-    </footer>
+    <footer></footer>
   </body>
 </html>
