@@ -1,0 +1,46 @@
+main {
+    display: block;
+}
+
+form {
+  background-color: var(--primary-color);
+  display: flex;
+  flex-direction: column;
+  /* align-items: center; */
+  justify-content: space-between;
+  gap: 20px;
+  padding: 20px;
+  width: clamp(300px, 35vw, 600px);
+  margin: 0 auto;
+  border: 2px solid var(--accent-color);
+  border-radius: 20px;
+}
+
+h2 {
+    text-align: center;
+    font-size: 2em;
+}
+
+input {
+    height: 50px;
+    padding: 10px;
+}
+
+#message {
+    height: 200px;
+    resize: none;
+    padding: 10px;
+}
+
+#submit {
+    width: 150px;
+    background-color: var(--secondary-color);
+    color: var(--text-color-light);
+    border: none;
+    font-size: 1.5em;
+    transition: all 0.3s;
+}
+
+#submit:hover {
+    background-color: var(--accent-color);
+}
