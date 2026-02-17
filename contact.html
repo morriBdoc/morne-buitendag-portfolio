@@ -5,24 +5,75 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact</title>
     <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="contact.css" />
   </head>
+  <style>
+    main {
+      display: block;
+    }
+
+    form {
+      background-color: var(--primary-color);
+      display: flex;
+      flex-direction: column;
+      /* align-items: center; */
+      justify-content: space-between;
+      gap: 20px;
+      padding: 20px;
+      width: clamp(300px, 35vw, 600px);
+      margin: 0 auto;
+      border: 2px solid var(--secondary-color);
+    }
+
+    h2 {
+      text-align: center;
+      font-size: 2em;
+    }
+
+    input {
+      height: 50px;
+      padding: 10px;
+      border: 2px solid var(--secondary-color);
+      color: var(--accent-color);
+    }
+
+    #message {
+      height: 200px;
+      resize: none;
+      padding: 10px;
+      border: 2px solid var(--secondary-color);
+      color: var(--accent-color);
+    }
+
+    #submit {
+      width: 150px;
+      background-color: var(--secondary-color);
+      color: var(--text-color-light);
+      border: none;
+      font-size: 1.5em;
+      transition: all 0.3s;
+    }
+
+    #submit:hover {
+      background-color: var(--accent-color);
+    }
+  </style>
   <body>
     <header>
       <div id="my-name">
-        <img
-          src="./images/profile-picture.jpg"
-          alt="Profile Picture"
-          class="profile-photo"
-          width="50px"
-          height="50px"
-        />
+        <a href="profile.html">
+          <img
+            src="./images/profile-picture.jpg"
+            alt="Profile Picture"
+            class="profile-photo"
+            width="50px"
+            height="50px"
+          />
+        </a>
         <h1>Morne Buitendag</h1>
       </div>
       <nav id="navigation">
         <a href="index.html" class="nav-link">Home</a>
         <a href="projects.html" class="nav-link">Projects</a>
-        <a href="articles.html" class="nav-link">Articles</a>
         <a href="contact.html" class="nav-link">Contact</a>
       </nav>
     </header>
