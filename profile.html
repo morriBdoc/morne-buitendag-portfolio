@@ -6,7 +6,26 @@
     <title>Profile</title>
     <link rel="stylesheet" href="style.css" />
   </head>
-  <style></style>
+  <style>
+    main {
+      padding: 10px;
+    }
+
+    #detailed-bio {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 20px;
+      margin: 0 auto;
+
+      .profile-picture {
+        width: clamp(150px, 20vw, 450px);
+        border: 5px solid black;
+        border-radius: 50%;
+        padding: 5px;
+      }
+    }
+  </style>
   <body>
     <header>
       <div id="my-name">
@@ -28,19 +47,36 @@
       </nav>
     </header>
     <main>
-      <section>
+      <section id="detailed-bio">
         <!-- Detailed Bio -->
+        <img src="images/profile-picture.jpg" alt="" class="profile-picture" />
+        <h2>Morne Buitendag</h2>
+        <p>
+          A person passionate about game development, animation, and the
+          entertainment industry. I&apos;m committed to exploring creative and
+          technical opportunities in game design, movie production, and digital
+          animation. Throughout my academic journey, I've engaged in various
+          projects that have honed my skills in design, coding, and
+          storytelling. Driven by a love for creativity and innovation, I
+          actively seek out ways to expand my expertise, whether through
+          personal projects, school assignments, or online courses. I&apos;m
+          excited about the future of entertainment and eager to contribute to
+          projects that bring stories and experiences to life. I&apos;m open to
+          collaborating with like-minded individuals and learning from industry
+          professionals. Let&apos;s connect and explore opportunities to create
+          something amazing together!
+        </p>
       </section>
-      <section>
+      <section id="values">
         <!-- Core Values -->
       </section>
-      <section>
+      <section id="technical-stack">
         <!-- Technical Stack -->
       </section>
-      <section>
+      <section id="education">
         <!-- Education & Certification -->
       </section>
-      <section>
+      <section id="beyond-the-screen">
         <!-- Beyond the screen -->
       </section>
     </main>
