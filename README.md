@@ -46,7 +46,7 @@ During the CSS phase, I learned how to use `grid-template-columns: repeat(auto-f
 ---
 
 ## 📝 License
-This project is open-source and free to use.
+This project is open-source and free to use under the MIT License.
 
 ---
 

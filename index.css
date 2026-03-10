@@ -1,0 +1,54 @@
+main {
+  display: grid;
+  grid-template-columns: repeat(3, auto);
+  grid-template-rows: repeat(4, auto);
+  gap: 10px;
+
+  section > section {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  #intro-section {
+    grid-column: 1 / 4;
+    grid-row: 1 / 2;
+    text-align: center;
+  }
+
+  #projects-section {
+    grid-column: 1 / 2;
+    grid-row: 2 / 4;
+  }
+
+  #work-experience-section {
+    grid-column: 2 / 3;
+    grid-row: 2 / 3;
+  }
+
+  #opensource-work-section {
+    grid-column: 2 / 3;
+    grid-row: 3 / 4;
+  }
+
+  #education-section {
+    grid-column: 3 / 4;
+    grid-row: 2 / 4;
+  }
+
+  #certifications-section {
+    grid-column: 1 / 4;
+    grid-row: 4 / 5;
+  }
+}
+
+@media (max-width: 769px) {
+  main {
+    display: flex;
+    flex-direction: column;
+
+    #intro-section > h2 {
+      font-size: clamp(2em, 12vw, 4em);
+    }
+  }
+}

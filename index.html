@@ -5,205 +5,71 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Home</title>
     <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="index.css" />
     <link
       rel="stylesheet"
-      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@40,400,0,0&icon_names=menu"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
     />
   </head>
-  <style>
-    main {
-      display: grid;
-      grid-template-columns: auto auto auto;
-      grid-template-rows: auto auto auto auto;
-      gap: 5px;
-      padding: 10px;
-
-      h2 {
-        margin-bottom: 25px;
-      }
-
-      section {
-        background-color: var(--primary-color);
-        border: 2px solid black;
-        padding: 20px;
-      }
-    }
-
-    #title {
-      grid-column: 1 / 4;
-      grid-row: 1 / 2;
-      text-align: center;
-
-      h2 {
-        font-size: 5em;
-      }
-    }
-
-    #projects {
-      grid-column: 1 / 2;
-      grid-row: 2 / 4;
-    }
-
-    #top-projects {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-
-      a {
-        background-color: var(--secondary-color);
-        text-decoration: none;
-        padding: 10px;
-        transition: all 0.3s;
-
-        h3 {
-          color: var(--primary-color);
-        }
-
-        &:hover {
-          background-color: var(--accent-color);
-          transform: scale(1.05);
-        }
-      }
-    }
-
-    #upcoming-projects {
-      border: 2px solid var(--secondary-color);
-      padding: 10px;
-      margin-top: 10px;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      gap: 10px;
-
-      h3 {
-        margin-bottom: 10px;
-      }
-
-      a {
-        display: block;
-        background-color: var(--secondary-color);
-        text-decoration: none;
-        padding: 10px;
-        transition: all 0.3s;
-
-        h4 {
-          color: var(--primary-color);
-        }
-
-        &:hover {
-          background-color: var(--accent-color);
-          transform: scale(1.05);
-        }
-      }
-    }
-
-    #work-experience {
-      grid-column: 2 / 3;
-      grid-row: 2 / 3;
-    }
-
-    #opensource-work {
-      grid-column: 2 / 3;
-      grid-row: 3 / 4;
-    }
-
-    #education {
-      grid-column: 3 / 4;
-      grid-row: 2 / 4;
-    }
-
-    #certifications {
-      grid-column: 1 / 4;
-      grid-row: 4 / 5;
-
-      div {
-        h3 {
-          a {
-            color: var(--secondary-color);
-            text-decoration: none;
-          }
-        }
-      }
-    }
-
-    @media (max-width: 769px) {
-      main {
-        display: flex;
-        flex-direction: column;
-      }
-
-      #title > h2 {
-        font-size: clamp(2em, 12vw, 4em);
-      }
-
-      #top-projects > a:hover {
-        transform: scale(1.02);
-      }
-
-      #upcoming-projects > a:hover {
-        transform: scale(1.01);
-      }
-    }
-  </style>
   <body>
     <header>
-      <div id="my-name">
+      <div>
         <a href="profile.html">
           <img
             src="./images/profile-picture.jpg"
             alt="Profile Picture"
-            class="profile-photo"
-            width="50px"
-            height="50px"
+            class="profile-photo-small"
           />
         </a>
         <h1>Morne Buitendag</h1>
       </div>
-      <nav id="navigation">
-        <a href="index.html" class="nav-link">Home</a>
-        <a href="projects.html" class="nav-link">Projects</a>
-        <a href="contact.html" class="nav-link">Contact</a>
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="projects.html">Projects</a>
+        <a href="contact.html">Contact</a>
+        <select id="theme-selector">
+          <option value="light">Light</option>
+          <option value="dark">Dark</option>
+        </select>
       </nav>
     </header>
     <main>
-      <section id="title">
+      <section id="intro-section">
         <h2>Frontend Developer</h2>
-        <p>
-          DISCLAIMER: Some of the content is incomplete. This portfolio is still
-          in development and not a final product.
-        </p>
       </section>
-      <section id="projects">
+      <section id="projects-section">
         <h2>Top Projects</h2>
-        <div id="top-projects">
+        <section id="top-projects">
           <a
             href="https://github.com/morriBdoc/image-grid-layout"
             target="_blank"
+            class="project"
           >
             <h3>Image Grid Layout</h3>
           </a>
           <a
             href="https://github.com/morriBdoc/morne-buitendag-portfolio"
             target="_blank"
+            class="project"
           >
             <h3>Portfolio</h3>
           </a>
           <a
             href="https://github.com/morriBdoc/Lung-Cancer-Predictor"
             target="_blank"
+            class="project"
           >
             <h3>Lung Cancer Predictor</h3>
           </a>
-        </div>
-        <div id="upcoming-projects">
+        </section>
+        <section id="upcoming-projects">
           <h3>Project Upcoming Page</h3>
-          <a href="">
+          <a href="" target="_blank" class="project">
             <h4>Test</h4>
           </a>
-        </div>
+        </section>
       </section>
-      <section id="work-experience">
+      <section id="work-experience-section">
         <h2>Work Experience</h2>
         <div>
           <p>
@@ -212,7 +78,7 @@
           </p>
         </div>
       </section>
-      <section id="opensource-work">
+      <section id="opensource-work-section">
         <h2>OpenSource Work</h2>
         <div>
           <p>No opensource work yet.</p>
@@ -221,7 +87,7 @@
           >
         </div>
       </section>
-      <section id="education">
+      <section id="education-section">
         <h2>Education</h2>
         <div>
           <h3>Hoerskool Centurion</h3>
@@ -236,7 +102,7 @@
           </div>
         </div>
       </section>
-      <section id="certifications">
+      <section id="certifications-section">
         <h2>Certifications</h2>
         <div>
           <h3>
@@ -250,6 +116,15 @@
         </div>
       </section>
     </main>
-    <footer></footer>
+    <footer>
+      &copy; 2026 | Morne Buitendag |
+      <a
+        href="https://github.com/morriBdoc/morne-buitendag-portfolio/blob/main/LICENSE"
+        target="_blank"
+      >
+        MIT Licensed
+      </a>
+    </footer>
   </body>
+  <script src="script.js"></script>
 </html>
