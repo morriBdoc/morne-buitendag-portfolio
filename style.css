@@ -211,6 +211,15 @@ main {
 
       &:hover {
         background-color: var(--primary-color);
+
+        &:disabled {
+          background-color: transparent;
+        }
+      }
+
+      &:disabled {
+        border-color: #1010104d;
+        cursor: not-allowed;
       }
     }
   }
